@@ -1,0 +1,28 @@
+# Basic settings
+alias ls='ls --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias rm="rm -i"
+alias l="ls"
+alias down="cd ~/Downloads"
+alias ..="cd .."
+alias ip="ipython"
+alias zshrc="v ~/.zshrc"
+alias ls="ls -G"
+alias i="ipython"
+
+# remote sever aliases
+alias 2501wiki='ssh -y ec2-user@ec2-54-250-239-53.ap-northeast-1.compute.amazonaws.com -i /home/yu/.ssh/2501Research-01.pem'
+alias 2501redmine='ssh -y bitnami@ec2-54-238-209-35.ap-northeast-1.compute.amazonaws.com -i /home/yu/.ssh/2501Research-02.pem'
+alias mirage="ssh -y 124.27.193.146"
+alias mirage='ssh -Y 192.168.1.10 -i ~/.ssh/id_rsa_mirage'
+alias mirage_global='ssh -Y 124.27.193.146 -i ~/.ssh/id_rsa_mirage'
+alias 2501R1='ssh -Y 172.23.100.34'
+alias 2501R2='ssh -Y 172.23.100.35'
+
+# neovim aliases
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
+

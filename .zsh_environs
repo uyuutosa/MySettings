@@ -1,0 +1,27 @@
+# added any pathes
+## CUDA
+export PATH="/usr/local/cuda/bin:$PATH"
+export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+export CPATH="/usr/local/cuda/include":$CPATH
+export INCLUDE="/usr/local/cuda/include":$INCLUDE
+
+## pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+
+export NCCL_ROOT="/usr/local/nccl"
+export CPATH="$NCCL_ROOT/include:$CPATH"
+export LD_LIBRARY_PATH="$NCCL_ROOT/lib/:$LD_LIBRARY_PATH"
+export LIBRARY_PATH="$NCCL_ROOT/lib/:$LIBRARY_PATH"
+
+export GIO_EXTRA_MODULES=/usr/lib/x86_64-linux-gnu/gio/modules/
+
+export MKL_THREADING_LAYER=GNU
+
+
+export GOOGLE_API_KEY=AIzaSyC0y-Gou7SuxIAynO19PYexYEGkf09O1tc
+export GOOGLE_SEARCH_ENGINE=018445563650065515915:_mxjxyabeju
+export PROMPT='%F{red}%n%f@%F{blue}%m%f %F{yellow}%1~%f %#'
+
+imageGetter(){curl "https://www.googleapis.com/customsearch/v1?key=$GOOGLE_API_KEY&cx=$GOOGLE_SEARCH_ENGINE&searchType=image&q=$1" | grep 'jpg\|png' | sed -e "s/\"link\": //g" | sed -e "s/\"//g" | sed -e "s/\,//g" | xargs wget -P $2;}
